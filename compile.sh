@@ -1,5 +1,5 @@
 clear
 
-g++ main.cpp GameEngine.hpp -o run -lsfml-graphics -lsfml-window -lsfml-system
+g++ src/*.cpp src/*.hpp -o run -lsfml-graphics -lsfml-window -lsfml-system
 
 ./run

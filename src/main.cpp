@@ -1,8 +1,7 @@
 //#include "../inc/common.hpp"
 #include "GameEngine.hpp"
 
-int main()
-{
+int main() {
 	GameEngine eng;
 	
 	eng.defaultLoop();

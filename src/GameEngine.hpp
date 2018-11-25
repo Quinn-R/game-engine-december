@@ -3,9 +3,9 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include "Object.hpp"
 
-class GameEngine
-{
+class GameEngine {
 private:
 	
 	sf::Vector2i windowRes;
@@ -20,8 +20,9 @@ public:
 	
 	void defaultLoop();
 	void init();
+	void createObj();
 	void events();
-	void update();
+	//void update();
 	void draw();
 	
 };
@@ -31,7 +32,7 @@ void GameEngine::defaultLoop() {
 	
 	while(window.isOpen()) {
 		events();
-		update();
+		//update();
 		draw();
 	}
 }
@@ -78,18 +79,16 @@ void GameEngine::events() {
     }
 }
 
-void GameEngine::update() {
+/*void GameEngine::update() {
 	
-}
+}*/
 
 void GameEngine::draw() {
 	window.clear(sf::Color::White);
 	
-	/*
-    for (unsigned int i = 0; i < objects.size(); i++) {
+    /*for (unsigned int i = 0; i < objects.size(); i++) {
         window.draw(objects[i].getObjShape());
-    }
-	*/
+    }*/
 
     window.display();
 }
