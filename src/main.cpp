@@ -1,6 +1,6 @@
 //#include "../inc/common.hpp"
-#include "GameEngine.hpp"
-#include "Object.hpp"
+#include "../engine/GameEngine.hpp"
+#include "../engine/Object.hpp"
 
 int main() {
 	GameEngine eng;
@@ -8,7 +8,7 @@ int main() {
 	std::vector<Object> objects;
 	
 	while(eng.isOpen()) {
-		eng.objectLoop(sf::Color::White, objects);
+		eng.defaultLoop(sf::Color::White, objects);
 	}
 	
 	return 0;
