@@ -9,17 +9,35 @@ private:
 	
 	std::string objectType;
 	sf::RectangleShape objectShape;
-	bool canCollide;
+	
+	bool isCollidable;
 	int objectSpeed;
 	
 public:
 	
-	void init(std::string, sf::RectangleShape, bool, int);
+	Object();
+	Object(std::string, sf::RectangleShape, bool, int);
 	
 	void setPosition(int, int);
 	sf::Vector2f getPosition();
 	
-	void getShape
+	sf::RectangleShape getShape();
+    
+    void move();
+    
+    void collide(std::vector<Object> objects);
 };
+
+Object::Object() {
+	objectShape.setSize(sf::Vector2f(32, 32));
+	objectShape.setPosition(sf::Vector2f(0, 0));
+	
+	isCollidable = 0;
+	objectSpeed = 4;
+}
+
+sf::RectangleShape Object::getShape() {
+	return objectShape;
+}
 
 #endif

@@ -16,28 +16,26 @@ private:
 	bool isMovingUp;
 	bool isMovingDown;
 	
+	sf::Clock clock;
+    sf::Time dt;
+	float dtAsSeconds;
+	
 public:
 	
-	void defaultLoop();
-	void init();
-	void createObj();
-	void events();
-	//void update();
-	void draw();
+	GameEngine();
 	
+	bool isOpen();
+	
+	void defaultLoop();
+	void objectLoop(sf::Color col, std::vector<Object> objects);
+	
+	void events();
+	void update();
+	void draw();
+	void draw(sf::Color col, std::vector<Object> objects);
 };
 
-void GameEngine::defaultLoop() {
-	init();
-	
-	while(window.isOpen()) {
-		events();
-		//update();
-		draw();
-	}
-}
-
-void GameEngine::init() {
+GameEngine::GameEngine() {
 	windowRes.x = sf::VideoMode::getDesktopMode().width;
 	windowRes.y = sf::VideoMode::getDesktopMode().height;
 	
@@ -47,6 +45,22 @@ void GameEngine::init() {
 	isMovingRight = 0;
 	isMovingUp = 0;
 	isMovingDown = 0;
+}
+
+bool GameEngine::isOpen() {
+	return window.isOpen();
+}
+
+void GameEngine::defaultLoop() {
+	events();
+	update();
+	draw();
+}
+
+void GameEngine::objectLoop(sf::Color col, std::vector<Object> objects) {
+	events();
+	update();
+	draw(col, objects);
 }
 
 void GameEngine::events() {
@@ -79,16 +93,22 @@ void GameEngine::events() {
     }
 }
 
-/*void GameEngine::update() {
-	
-}*/
+void GameEngine::update() {
+	dt = clock.restart();
+	dtAsSeconds = dt.asSeconds();
+}
 
 void GameEngine::draw() {
 	window.clear(sf::Color::White);
+    window.display();
+}
+
+void GameEngine::draw(sf::Color col, std::vector<Object> objects) {
+	window.clear(col);
 	
-    /*for (unsigned int i = 0; i < objects.size(); i++) {
-        window.draw(objects[i].getObjShape());
-    }*/
+    for (unsigned int i = 0; i < objects.size(); i++) {
+        window.draw(objects[i].getShape());
+    }
 
     window.display();
 }
