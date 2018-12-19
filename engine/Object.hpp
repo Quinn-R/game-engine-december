@@ -16,9 +16,9 @@ private:
 public:
 	
 	Object();
-	Object(std::string, sf::RectangleShape, bool, int);
+	Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPosition, bool isCol, int objSpeed);
 	
-	void setPosition(int, int);
+	void setPosition(sf::Vector2f);
 	sf::Vector2f getPosition();
 	
 	sf::RectangleShape getShape();
