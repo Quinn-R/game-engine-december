@@ -6,8 +6,5 @@ GameEngine::GameEngine() {
 	
 	window.create(sf::VideoMode(windowRes.x, windowRes.y), "", sf::Style::Fullscreen);
 	
-	isMovingLeft = 0;
-	isMovingRight = 0;
-	isMovingUp = 0;
-	isMovingDown = 0;
+	moves.reserve(4);
 }

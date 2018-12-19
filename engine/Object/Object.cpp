@@ -2,9 +2,9 @@
 
 Object::Object() {
 	objectType = "player";
-	
 	objectShape.setSize(sf::Vector2f(32, 32));
 	objectShape.setPosition(sf::Vector2f(0, 0));
+	objectShape.setFillColor(sf::Color::Blue);
 	
 	isCollidable = 0;
 	objectSpeed = 4;

@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
-#include "Object.hpp"
+//#include "Object.hpp"
 
 class GameEngine {
 private:
@@ -11,10 +11,7 @@ private:
 	sf::Vector2i windowRes;
 	sf::RenderWindow window;
 	
-	bool isMovingLeft;
-	bool isMovingRight;
-	bool isMovingUp;
-	bool isMovingDown;
+	std::vector<int> moves; // left, right, up, down
 	
 	sf::Clock clock;
     sf::Time dt;
@@ -27,12 +24,16 @@ public:
 	bool isOpen();
 	
 	void defaultLoop();
-	void defaultLoop(sf::Color col, std::vector<Object> objects);
+	void defaultLoop(sf::Color col, std::vector<sf::RectangleShape> objectShapes);
 	
 	void events();
 	void update();
 	void draw();
-	void draw(sf::Color col, std::vector<Object> objects);
+	void draw(sf::Color col, std::vector<sf::RectangleShape> objectShapes);
+	
+	float getTime();
+	
+	std::vector<int> getMoves();
 };
 
 #endif

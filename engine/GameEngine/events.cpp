@@ -5,27 +5,27 @@ void GameEngine::events() {
         window.close();
     }
 	
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        isMovingLeft = 1;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        moves[0] = 1;
     } else {
-        isMovingLeft = 0;
+        moves[0] = 0;
     }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        isMovingRight = 1;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        moves[1] = 1;
     } else {
-        isMovingRight = 0;
+        moves[1] = 0;
     }
 	
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        isMovingUp = 1;
+        moves[2] = 1;
     } else {
-        isMovingUp = 0;
+        moves[2] = 0;
     }
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        isMovingDown = 1;
+        moves[3] = 1;
     } else {
-        isMovingDown = 0;
+        moves[3] = 0;
     }
 }

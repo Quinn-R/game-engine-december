@@ -23,9 +23,9 @@ public:
 	
 	sf::RectangleShape getShape();
     
-    void move();
+    void move(std::vector<int> moves, float dtAsSeconds, std::vector<sf::RectangleShape> objectShapes);
     
-    void collide(std::vector<Object> objects);
+    std::vector<int> collide(int objToMove, std::vector<sf::RectangleShape> objectShapes);
 };
 
 #endif
