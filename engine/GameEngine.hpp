@@ -10,7 +10,7 @@ private:
 	
 	sf::Vector2i windowRes;
 	sf::RenderWindow window;
-	
+	sf::View view;
 	std::vector<int> moves; // left, right, up, down
 	
 	sf::Clock clock;
@@ -33,7 +33,7 @@ public:
 	
 	float getTime();
 	
-	std::vector<int> getMoves();
+	std::vector<int>& getMoves();
 };
 
 #endif
