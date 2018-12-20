@@ -30,6 +30,7 @@ public:
 	void update();
 	void draw();
 	void draw(sf::Color col, std::vector<sf::RectangleShape> objectShapes);
+	void drawEntity(std::vector<sf::RectangleShape> &rects);
 	
 	float getTime();
 	

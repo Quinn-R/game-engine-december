@@ -28,6 +28,7 @@ public:
 	sf::Vector2f getPosition();
 	
 	sf::RectangleShape getShape();
+	std::vector<sf::RectangleShape>& getBumpers();
 	
 	void setBumperSize();
 	void setBumperPosition();

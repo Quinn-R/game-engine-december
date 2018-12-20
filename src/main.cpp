@@ -21,6 +21,7 @@ int main() {
 		objectShapes[0] = objects[0].getShape();
 		
 		eng.defaultLoop(sf::Color::White, objectShapes);
+		eng.drawEntity(objects[0].getBumpers());
 	}
 	
 	return 0;
