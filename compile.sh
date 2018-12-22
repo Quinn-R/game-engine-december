@@ -2,7 +2,7 @@ clear
 
 #inc/*.hpp
 
-g++ src/*.cpp engine/*.hpp engine/*/*.cpp -o obj/run -lsfml-graphics -lsfml-window -lsfml-system
+g++ src/*.cpp inc/*.hpp engine/*.hpp engine/*/*.cpp -o obj/run -lsfml-graphics -lsfml-window -lsfml-system
 
 cd obj
 

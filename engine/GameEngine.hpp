@@ -1,9 +1,7 @@
 #ifndef GAMEENGINE_HPP
 #define GAMEENGINE_HPP
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-//#include "Object.hpp"
+#include "../inc/common.hpp"
 
 class GameEngine {
 private:
@@ -24,13 +22,17 @@ public:
 	bool isOpen();
 	
 	void defaultLoop();
-	void defaultLoop(sf::Color col, std::vector<sf::RectangleShape> objectShapes);
+	void defaultLoop(sf::Color col, std::vector<sf::RectangleShape> &rects);
 	
 	void events();
 	void update();
-	void draw();
-	void draw(sf::Color col, std::vector<sf::RectangleShape> objectShapes);
+	
+	void clear();
+	void clear(sf::Color col);
 	void drawEntity(std::vector<sf::RectangleShape> &rects);
+	void display();
+	void draw();
+	void draw(sf::Color col, std::vector<sf::RectangleShape> &rects);
 	
 	float getTime();
 	

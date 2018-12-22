@@ -6,8 +6,8 @@ void GameEngine::defaultLoop() {
 	draw();
 }
 
-void GameEngine::defaultLoop(sf::Color col, std::vector<sf::RectangleShape> objectShapes) {
+void GameEngine::defaultLoop(sf::Color col, std::vector<sf::RectangleShape> &rects) {
 	events();
 	update();
-	draw(col, objectShapes);
+	draw(col, rects);
 }
