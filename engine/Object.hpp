@@ -11,11 +11,7 @@ private:
 	
 	sf::Vector2f objectPos;
 	
-	std::vector<int> objectCollides;
-	std::vector<sf::RectangleShape> objectBumpers;
-	
 	bool objectIsCollidable;
-	int objectSpeed;
 	
 public:
 	
@@ -26,13 +22,6 @@ public:
 	sf::Vector2f getPosition();
 	
 	sf::RectangleShape getShape();
-	std::vector<sf::RectangleShape>& getBumpers();
-	
-	void setBumperSize();
-	void setBumperPosition();
-    
-    void move(std::vector<int> &moves, float dtAsSeconds, std::vector<Object> &objects);
-    void collide(int objToMove, std::vector<Object> &objects);
 };
 
 #endif

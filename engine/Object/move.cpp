@@ -2,7 +2,7 @@
 
 void Object::move(std::vector<int> &moves, float dtAsSeconds, std::vector<Object> &objects) {
     collide(0, objects);
-    setBumperPosition();
+    //setBumperPosition();
     
     if(moves[0] == 1 && objectCollides[0] == 0) {
         objectPos.x -= objectSpeed * dtAsSeconds;
