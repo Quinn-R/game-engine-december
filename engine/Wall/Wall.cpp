@@ -1,9 +1,9 @@
-#include "../Object.hpp"
+#include "../Wall.hpp"
 
 Wall::Wall() {
 	Object();
 }
-
-Wall::Wall(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col) {
-	Object(objType, objSize, objPos, col);
+//Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl);
+Wall::Wall(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, isColl) {
+	Object(objType, objSize, objPos, col, isColl);
 }

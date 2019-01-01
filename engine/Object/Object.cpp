@@ -6,12 +6,16 @@ Object::Object() {
 	objectShape.setSize(sf::Vector2f(32, 32));
 	objectShape.setPosition(sf::Vector2f(0, 0));
 	objectShape.setFillColor(sf::Color::Blue);
+	
+	objectIsCollidable = 0;
 }
 
-Object::Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col) {
+Object::Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl) {
 	objectType = objType;
 	
 	objectShape.setSize(objSize);
 	objectShape.setPosition(objPos);
 	objectShape.setFillColor(col);
+	
+	objectIsCollidable = isColl;
 }

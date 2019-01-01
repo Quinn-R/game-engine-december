@@ -1,9 +1,8 @@
-#include "../Object.hpp"
+#include "../Character.hpp"
 
 Character::Character() {
 	Object();
 	
-	objectIsCollidable = 0;
 	objectSpeed = 100;
 	
 	for(int i = 0; i < 4; i++) {
@@ -18,9 +17,8 @@ Character::Character() {
 }
 
 Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed) {
-	Object(objType, objSize, objPos, col);
+	Object(objType, objSize, objPos, col, objIsColl);
 	
-	objectIsCollidable = objIsColl;
 	objectSpeed = objSpeed;
 	
 	for(int i = 0; i < 4; i++) {

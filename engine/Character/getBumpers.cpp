@@ -1,5 +1,5 @@
-#include "../Object.hpp"
+#include "../Character.hpp"
 
-std::vector<sf::RectangleShape>& Object::getBumpers() {
+std::vector<sf::RectangleShape>& Character::getBumpers() {
     return objectBumpers;
 }

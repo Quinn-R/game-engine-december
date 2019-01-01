@@ -1,6 +1,6 @@
-#include "../Object.hpp"
+#include "../Character.hpp"
 
-void Object::collide(int objToMove, std::vector<Object> &objects) {
+void Character::collide(int objToMove, std::vector<Object> &objects) {
     
     std::cout << "objects: " << objects.size() << std::endl;
     for(int i = 0; i < objects.size(); i++) {

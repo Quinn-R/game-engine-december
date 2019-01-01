@@ -16,10 +16,13 @@ private:
 public:
 	
 	Object();
-	Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl, int objSpeed);
+	Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl);
 	
 	void setPosition(sf::Vector2f);
 	sf::Vector2f getPosition();
+	
+	void setSize(sf::Vector2f);
+	sf::Vector2f getSize();
 	
 	sf::RectangleShape getShape();
 };

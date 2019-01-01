@@ -6,6 +6,8 @@
 
 int main() {
 	
+	GameEngine eng;
+	
 	std::vector<Character> chars;
 	std::vector<Wall> walls;
 	std::vector<sf::RectangleShape> objectShapes;
@@ -13,7 +15,7 @@ int main() {
 	chars.push_back(Character());
 	objectShapes.push_back(chars[0].getShape());
 		
-	if (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; i++) {
 		walls.push_back(Wall());
 		objectShapes.push_back(walls[i].getShape());
 	}
