@@ -2,10 +2,11 @@ clear
 
 #inc/*.hpp
 
-g++ src/*.cpp inc/*.hpp engine/*.hpp engine/*/*.cpp -o obj/run -lsfml-graphics -lsfml-window -lsfml-system
+g++ src/*.cpp inc/*.hpp engine/*.hpp engine/*/*.cpp -Ilib/SFML-2.5.1/include -o obj/run -Llib/SFML-2.5.1/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 cd obj
 
-./run
+export LD_LIBRARY_PATH=../lib/SFML-2.5.1/lib && ./run
+#./run
 
 cd ..
