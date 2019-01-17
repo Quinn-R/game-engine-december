@@ -16,7 +16,8 @@ int main() {
 	objectShapes.push_back(chars[0].getShape());
 
 	for (int i = 0; i < 4; i++) {
-		walls.push_back(Wall());
+		//std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl)
+		walls.push_back(Wall("Wall", sf::Vector2f(32, 32), sf::Vector2f(100, 32 * i), sf::Color::Black, 1));
 		objectShapes.push_back(walls[i].getShape());
 	}
 
@@ -24,15 +25,14 @@ int main() {
 		eng.events();
 		eng.update();
 
-		chars[0].move(eng.getMoves(), eng.getTime(), objectShapes);
+		chars[0].move(eng.getMoves(), 0, eng.getTime(), objectShapes);
 
 		objectShapes[0] = (chars[0].getShape());
-		objectShapes[1] = (walls[0].getShape());
-		objectShapes[2] = (walls[1].getShape());
-		objectShapes[3] = (walls[2].getShape());
-		objectShapes[4] = (walls[3].getShape());
+		for (int i = 1; i < 5; i++) {
+			objectShapes[i] = (walls[i - 1].getShape());
+		}
 
-		eng.clear(sf::Color::Yellow);
+		eng.clear(sf::Color::Cyan);
 		eng.drawEntity(objectShapes);
 		eng.drawEntity(chars[0].getBumpers());
 		eng.display();
