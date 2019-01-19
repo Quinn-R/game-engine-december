@@ -9,7 +9,7 @@ private:
 	std::string objectType;
 	sf::RectangleShape objectShape;
 	
-	sf::Vector2f objectPos;
+	//sf::Vector2f objectPos;
 	
 	bool objectIsCollidable;
 	

@@ -11,21 +11,25 @@ int main() {
 	std::vector<Character> chars;
 	std::vector<Wall> walls;
 	std::vector<sf::RectangleShape> objectShapes;
-
-	chars.push_back(Character());
+	
+	//(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed)
+	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color::Green, 1, 100));
 	objectShapes.push_back(chars[0].getShape());
 
 	for (int i = 0; i < 4; i++) {
-		//std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl)
-		walls.push_back(Wall("Wall", sf::Vector2f(32, 32), sf::Vector2f(100, 32 * i), sf::Color::Black, 1));
+		////Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl);
+		walls.push_back(Wall("Wall", sf::Vector2f(32, 32), sf::Vector2f(32 * i, 64), sf::Color::Black, 1));
 		objectShapes.push_back(walls[i].getShape());
 	}
 
 	while(eng.isOpen()) {
 		eng.events();
 		eng.update();
-
-		chars[0].move(eng.getMoves(), 0, eng.getTime(), objectShapes);
+		
+		//std::cout << "Time: " << eng.getTime() << std::endl;
+		
+		//void Character::move(std::vector<int> &moves, float dtAsSeconds, int objToMove, std::vector<sf::RectangleShape> &objects) 
+		chars[0].move(eng.getMoves(), eng.getTime(), 0, objectShapes);
 
 		objectShapes[0] = (chars[0].getShape());
 		for (int i = 1; i < 5; i++) {
@@ -34,7 +38,7 @@ int main() {
 
 		eng.clear(sf::Color::Cyan);
 		eng.drawEntity(objectShapes);
-		eng.drawEntity(chars[0].getBumpers());
+		//eng.drawEntity(chars[0].getBumpers());
 		eng.display();
 	}
 

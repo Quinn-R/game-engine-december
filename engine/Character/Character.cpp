@@ -1,7 +1,7 @@
 #include "../Character.hpp"
 
-Character::Character() {
-	Object();
+Character::Character() : Object::Object() {
+	//Object();
 	
 	objectSpeed = 100;
 	
@@ -16,8 +16,8 @@ Character::Character() {
 	setBumperPosition();
 }
 
-Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed) {
-	Object(objType, objSize, objPos, col, objIsColl);
+Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed) : Object::Object(objType, objSize, objPos, col, objIsColl) {
+	//Object(objType, objSize, objPos, col, objIsColl);
 	
 	objectSpeed = objSpeed;
 	

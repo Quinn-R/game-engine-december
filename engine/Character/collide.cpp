@@ -2,10 +2,10 @@
 
 void Character::collide(int objToMove, std::vector<sf::RectangleShape> &objects) {
 
-    std::cout << "objects: " << objects.size() << std::endl;
+    //std::cout << "objects: " << objects.size() << std::endl;
     for(int i = 0; i < objects.size(); i++) {
         if(i == objToMove) {
-            std::cout << "i: " << i << std::endl;
+            //std::cout << "i: " << i << std::endl;
             continue;
         }
 
