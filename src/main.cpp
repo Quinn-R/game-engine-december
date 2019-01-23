@@ -29,7 +29,7 @@ int main() {
 		//std::cout << "Time: " << eng.getTime() << std::endl;
 		
 		//void Character::move(std::vector<int> &moves, float dtAsSeconds, int objToMove, std::vector<sf::RectangleShape> &objects) 
-		chars[0].move(eng.getMoves(), eng.getTime(), 0, objectShapes);
+		chars[0].move(eng.getMoves(), eng.getTime(), /*0, */objectShapes);
 
 		objectShapes[0] = (chars[0].getShape());
 		for (int i = 1; i < 5; i++) {
