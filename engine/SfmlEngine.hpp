@@ -1,9 +1,9 @@
-#ifndef GAMEENGINE_HPP
-#define GAMEENGINE_HPP
+#ifndef SFMLENGINE_HPP
+#define SFMLENGINE_HPP
 
 #include "../inc/common.hpp"
 
-class GameEngine {
+class SfmlEngine {
 private:
 	
 	sf::Vector2i windowRes;
@@ -17,7 +17,7 @@ private:
 	
 public:
 	
-	GameEngine();
+	SfmlEngine();
 	
 	bool isOpen();
 	

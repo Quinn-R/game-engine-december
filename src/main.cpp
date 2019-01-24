@@ -1,12 +1,12 @@
 //#include "../inc/common.hpp"
-#include "../engine/GameEngine.hpp"
+#include "../engine/SfmlEngine.hpp"
 #include "../engine/Object.hpp"
 #include "../engine/Character.hpp"
 #include "../engine/Wall.hpp"
 
 int main() {
 
-	GameEngine eng;
+	SfmlEngine eng;
 
 	std::vector<Character> chars;
 	std::vector<Wall> walls;
@@ -46,7 +46,7 @@ int main() {
 }
 
 /*int main() {
-	GameEngine eng;
+	SfmlEngine eng;
 
 	// (std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl, int objSpeed)
 	std::vector<Object> objects;

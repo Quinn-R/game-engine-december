@@ -1,6 +1,6 @@
-#include "../GameEngine.hpp"
+#include "../SfmlEngine.hpp"
 
-void GameEngine::events() {
+void SfmlEngine::events() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
         window.close();
     }

@@ -1,6 +1,6 @@
-#include "../GameEngine.hpp"
+#include "../SfmlEngine.hpp"
 
-void GameEngine::drawEntity(std::vector<sf::RectangleShape> &rects) {
+void SfmlEngine::drawEntity(std::vector<sf::RectangleShape> &rects) {
 	//window.clear();
 	
 	for (unsigned int i = 0; i < rects.size(); i++) {
@@ -11,12 +11,12 @@ void GameEngine::drawEntity(std::vector<sf::RectangleShape> &rects) {
 }
 
 /*
-void GameEngine::draw() {
+void SfmlEngine::draw() {
 	window.clear(sf::Color::White);
     window.display();
 }
 
-void GameEngine::draw(sf::Color col, std::vector<sf::RectangleShape> objectShapes) {
+void SfmlEngine::draw(sf::Color col, std::vector<sf::RectangleShape> objectShapes) {
 	window.clear(col);
 	
     for (unsigned int i = 0; i < objectShapes.size(); i++) {

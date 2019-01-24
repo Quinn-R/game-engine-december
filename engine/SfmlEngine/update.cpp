@@ -1,6 +1,6 @@
-#include "../GameEngine.hpp"
+#include "../SfmlEngine.hpp"
 
-void GameEngine::update() {
+void SfmlEngine::update() {
 	dt = clock.restart();
 	dtAsSeconds = dt.asSeconds();
 }

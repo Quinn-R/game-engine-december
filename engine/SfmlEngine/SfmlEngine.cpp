@@ -1,6 +1,6 @@
-#include "../GameEngine.hpp"
+#include "../SfmlEngine.hpp"
 
-GameEngine::GameEngine() {
+SfmlEngine::SfmlEngine() {
 	windowRes.x = sf::VideoMode::getDesktopMode().width;
 	windowRes.y = sf::VideoMode::getDesktopMode().height;
 	
