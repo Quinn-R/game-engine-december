@@ -1,4 +1,4 @@
-//#include "../inc/common.hpp"
+#include "../inc/common.hpp"
 #include "../engine/SfmlEngine.hpp"
 #include "../engine/Object.hpp"
 #include "../engine/Character.hpp"

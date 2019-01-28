@@ -9,11 +9,14 @@ private:
 	sf::Vector2i windowRes;
 	sf::RenderWindow window;
 	sf::View view;
+	
 	std::vector<int> moves; // left, right, up, down
 	
 	sf::Clock clock;
     sf::Time dt;
 	float dtAsSeconds;
+	
+	int gameType;
 	
 public:
 	
