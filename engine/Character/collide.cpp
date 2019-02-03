@@ -1,13 +1,12 @@
 #include "../Character.hpp"
-
+/*
 void Character::collide(std::vector<sf::RectangleShape> &objects) {
         for(int i = 0; i < objects.size(); i++) {
             if() {
                 
             }
         }
-}
-
+}*/
 /*
 void Character::collide(std::vector<sf::RectangleShape> &objects) {
     for(int i = 0; i < objects.size(); i++) {
@@ -30,9 +29,11 @@ void Character::collide(std::vector<sf::RectangleShape> &objects) {
 }
 */
 
-/*
 void Character::collide(std::vector<sf::RectangleShape> &objects) {
     for(int i = 0; i < objects.size(); i++) {
+        if(i == 0) {
+            continue;
+        }
         if(sf::FloatRect(objectBumpers[0].getPosition().x + 1, objectBumpers[0].getPosition().y, objectBumpers[0].getSize().x, objectBumpers[0].getSize().y).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
             objectCollides[0] = 1;
         }
@@ -50,4 +51,3 @@ void Character::collide(std::vector<sf::RectangleShape> &objects) {
         }
     }
 }
-*/

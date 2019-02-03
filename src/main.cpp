@@ -13,12 +13,12 @@ int main() {
 	std::vector<sf::RectangleShape> objectShapes;
 	
 	//(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed)
-	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color::Green, 1, 100));
+	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color::White, 1, 100));
 	objectShapes.push_back(chars[0].getShape());
 
 	for (int i = 0; i < 4; i++) {
 		////Object(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool isColl);
-		walls.push_back(Wall("Wall", sf::Vector2f(32, 32), sf::Vector2f(32 * i, 64), sf::Color::Black, 1));
+		walls.push_back(Wall("Wall", sf::Vector2f(32, 32), sf::Vector2f(32 * i, 64), sf::Color::White, 1));
 		objectShapes.push_back(walls[i].getShape());
 	}
 
@@ -36,7 +36,7 @@ int main() {
 			objectShapes[i] = (walls[i - 1].getShape());
 		}
 
-		eng.clear(sf::Color::Cyan);
+		eng.clear(sf::Color::Black);
 		eng.drawEntity(objectShapes);
 		//eng.drawEntity(chars[0].getBumpers());
 		eng.display();
