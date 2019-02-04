@@ -7,6 +7,8 @@ void Character::move(std::vector<int> &moves, float dtAsSeconds, std::vector<sf:
 
     if(moves[0] == 1 && objectCollides[0] == 0) {
         objectPos.x -= objectSpeed * dtAsSeconds;
+    } else if(objectCollides[0] == 1) {
+        objectPos.x = objectBumpers[0].getPosition().x - objectBumpers[0].getSize().x;
     }
 
     if(moves[1] == 1 && objectCollides[1] == 0) {

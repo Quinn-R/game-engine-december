@@ -7,9 +7,12 @@ void Character::collide(std::vector<sf::RectangleShape> &objects) {
             }
         }
 }*/
-/*
+
 void Character::collide(std::vector<sf::RectangleShape> &objects) {
     for(int i = 0; i < objects.size(); i++) {
+        /*if(i == 0) {
+            continue;
+        }*/
         if(sf::FloatRect(objectBumpers[0].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
             objectCollides[0] = 1;
         }
@@ -27,8 +30,8 @@ void Character::collide(std::vector<sf::RectangleShape> &objects) {
         }
     }
 }
-*/
 
+/*
 void Character::collide(std::vector<sf::RectangleShape> &objects) {
     for(int i = 0; i < objects.size(); i++) {
         if(i == 0) {
@@ -51,3 +54,4 @@ void Character::collide(std::vector<sf::RectangleShape> &objects) {
         }
     }
 }
+*/
