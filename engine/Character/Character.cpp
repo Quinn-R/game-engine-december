@@ -9,7 +9,7 @@ Character::Character() : Object::Object() {
 		objectCollides.push_back(0);
 		
 		objectBumpers.push_back(sf::RectangleShape());
-		objectBumpers[i].setFillColor(sf::Color::Black);
+		objectBumpers[i].setFillColor(sf::Color::Green);
 	}
 	
 	setBumperSize();
@@ -23,7 +23,9 @@ Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f obj
 	
 	for(int i = 0; i < 4; i++) {
 		objectCollides.push_back(0);
+		
 		objectBumpers.push_back(sf::RectangleShape());
+		objectBumpers[i].setFillColor(sf::Color::Green);
 	}
 	
 	setBumperSize();

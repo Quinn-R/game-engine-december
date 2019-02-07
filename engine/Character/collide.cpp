@@ -1,57 +1,32 @@
 #include "../Character.hpp"
-/*
-void Character::collide(std::vector<sf::RectangleShape> &objects) {
-        for(int i = 0; i < objects.size(); i++) {
-            if() {
-                
-            }
-        }
-}*/
 
-void Character::collide(std::vector<sf::RectangleShape> &objects) {
-    for(int i = 0; i < objects.size(); i++) {
-        /*if(i == 0) {
+void Character::collide(std::vector<sf::RectangleShape> &objShapes, int objCollider) {
+    
+    sf::Vector2f delta/* = (sf::Vector2f())*/;
+    sf::Vector2f collider1;
+    sf::Vector2f collider2;
+    
+    for(int i = 0; i < objShapes.size() - 1; i++) {
+        if(i == objCollider) {
             continue;
-        }*/
-        if(sf::FloatRect(objectBumpers[0].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
+        }
+        
+        delta = sf::Vector2f(objShapes[i] - objShapes[objCollider]);
+        
+        if(sf::FloatRect(objectBumpers[0].getGlobalBounds()).intersects(sf::FloatRect(objShapes[i].getGlobalBounds()))) {
             objectCollides[0] = 1;
         }
 
-        if(sf::FloatRect(objectBumpers[1].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
+        if(sf::FloatRect(objectBumpers[1].getGlobalBounds()).intersects(sf::FloatRect(objShapes[i].getGlobalBounds()))) {
             objectCollides[1] = 1;
         }
 
-        if(sf::FloatRect(objectBumpers[2].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
+        if(sf::FloatRect(objectBumpers[2].getGlobalBounds()).intersects(sf::FloatRect(objShapes[i].getGlobalBounds()))) {
             objectCollides[2] = 1;
         }
 
-        if(sf::FloatRect(objectBumpers[3].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
+        if(sf::FloatRect(objectBumpers[3].getGlobalBounds()).intersects(sf::FloatRect(objShapes[i].getGlobalBounds()))) {
             objectCollides[3] = 1;
         }
     }
 }
-
-/*
-void Character::collide(std::vector<sf::RectangleShape> &objects) {
-    for(int i = 0; i < objects.size(); i++) {
-        if(i == 0) {
-            continue;
-        }
-        if(sf::FloatRect(objectBumpers[0].getPosition().x + 1, objectBumpers[0].getPosition().y, objectBumpers[0].getSize().x, objectBumpers[0].getSize().y).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
-            objectCollides[0] = 1;
-        }
-
-        if(sf::FloatRect(objectBumpers[1].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
-            objectCollides[1] = 1;
-        }
-
-        if(sf::FloatRect(objectBumpers[2].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
-            objectCollides[2] = 1;
-        }
-
-        if(sf::FloatRect(objectBumpers[3].getGlobalBounds()).intersects(sf::FloatRect(objects[i].getGlobalBounds()))) {
-            objectCollides[3] = 1;
-        }
-    }
-}
-*/

@@ -38,7 +38,7 @@ int main() {
 
 		eng.clear(sf::Color::Black);
 		eng.drawEntity(objectShapes);
-		//eng.drawEntity(chars[0].getBumpers());
+		eng.drawEntity(chars[0].getBumpers());
 		eng.display();
 	}
 
