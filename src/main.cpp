@@ -13,7 +13,7 @@ int main() {
 	std::vector<sf::RectangleShape> objectShapes;
 	
 	//(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed)
-	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color::White, 1, 100));
+	chars.push_back(Character("player1", sf::Vector2f(32, 32), sf::Vector2f(0, 0), sf::Color(252, 78, 162), 1, 100));
 	objectShapes.push_back(chars[0].getShape());
 
 	for (int i = 0; i < 4; i++) {
@@ -29,7 +29,7 @@ int main() {
 		//std::cout << "Time: " << eng.getTime() << std::endl;
 		
 		//void Character::move(std::vector<int> &moves, float dtAsSeconds, int objToMove, std::vector<sf::RectangleShape> &objects) 
-		chars[0].move(eng.getMoves(), eng.getTime(), /*0, */objectShapes);
+		chars[0].move(eng.getMoves(), eng.getTime(), objectShapes, 0);
 
 		objectShapes[0] = (chars[0].getShape());
 		for (int i = 1; i < 5; i++) {
@@ -38,7 +38,7 @@ int main() {
 
 		eng.clear(sf::Color::Black);
 		eng.drawEntity(objectShapes);
-		eng.drawEntity(chars[0].getBumpers());
+		//eng.drawEntity(chars[0].getBumpers());
 		eng.display();
 	}
 

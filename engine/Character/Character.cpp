@@ -8,12 +8,12 @@ Character::Character() : Object::Object() {
 	for(int i = 0; i < 4; i++) {
 		objectCollides.push_back(0);
 		
-		objectBumpers.push_back(sf::RectangleShape());
-		objectBumpers[i].setFillColor(sf::Color::Green);
+		/*objectBumpers.push_back(sf::RectangleShape());
+		objectBumpers[i].setFillColor(sf::Color::Green);*/
 	}
 	
-	setBumperSize();
-	setBumperPosition();
+	/*setBumperSize();
+	setBumperPosition();*/
 }
 
 Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f objPos, sf::Color col, bool objIsColl, int objSpeed) : Object::Object(objType, objSize, objPos, col, objIsColl) {
@@ -24,10 +24,10 @@ Character::Character(std::string objType, sf::Vector2f objSize, sf::Vector2f obj
 	for(int i = 0; i < 4; i++) {
 		objectCollides.push_back(0);
 		
-		objectBumpers.push_back(sf::RectangleShape());
-		objectBumpers[i].setFillColor(sf::Color::Green);
+		/*objectBumpers.push_back(sf::RectangleShape());
+		objectBumpers[i].setFillColor(sf::Color::Green);*/
 	}
 	
-	setBumperSize();
-	setBumperPosition();
+	/*setBumperSize();
+	setBumperPosition();*/
 }

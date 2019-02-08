@@ -5,7 +5,7 @@ SfmlEngine::SfmlEngine() {
 	windowRes.y = sf::VideoMode::getDesktopMode().height;
 	
 	window.create(sf::VideoMode(windowRes.x, windowRes.y), "", sf::Style::Fullscreen);
-	view.reset(sf::FloatRect(0.f, 0.f, windowRes.x/6, windowRes.y/6));
+	view.reset(sf::FloatRect(-16.f, -16.f, (windowRes.x - 16) / 6, (windowRes.y - 16) / 6));
 	window.setView(view);
 	
 	for(int i = 0; i < 4; i++) {
