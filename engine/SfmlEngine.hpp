@@ -18,6 +18,8 @@ private:
 	
 	int gameType;
 	
+	sf::Font fnt1;
+	
 public:
 	
 	SfmlEngine();
@@ -40,6 +42,10 @@ public:
 	float getTime();
 	
 	std::vector<int>& getMoves();
+	
+	void loadFont();
+	void loadFont(std::string fntName);
+	void getFont();
 };
 
 #endif

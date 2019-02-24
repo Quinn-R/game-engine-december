@@ -5,6 +5,24 @@
 #include "../engine/Wall.hpp"
 
 int main() {
+	SfmlEngine eng;
+	
+	eng.loadFont();
+	//end.getFont();
+	
+	while(eng.isOpen()) {
+		eng.events();
+		eng.update();
+
+		eng.clear(sf::Color::Black);
+		eng.drawEntity(/*objectShapes*/);
+		eng.display();
+	}
+
+	return 0;
+}
+
+/*int main() {
 
 	SfmlEngine eng;
 
@@ -43,7 +61,7 @@ int main() {
 	}
 
 	return 0;
-}
+}*/
 
 /*int main() {
 	SfmlEngine eng;
